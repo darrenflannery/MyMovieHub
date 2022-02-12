@@ -1,0 +1,4 @@
+CREATE TABLE rating (
+  userId          VARCHAR(64) PRIMARY KEY,
+  movieId INTEGER NOT NULL,
+  rating   INTEGER NOT NULL);
