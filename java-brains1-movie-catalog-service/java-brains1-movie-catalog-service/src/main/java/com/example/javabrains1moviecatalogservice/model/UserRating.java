@@ -4,8 +4,8 @@ import java.util.List;
 
 public class UserRating {
 
-    private String userId;
-    private List<Rating> ratings;
+	private String userId;
+	private List<Rating> ratings;
     
     public UserRating() {
 	}
@@ -17,19 +17,23 @@ public class UserRating {
 	}
 
 	public String getUserId() {
-        return userId;
-    }
+		return userId;
+	}
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
-    public List<Rating> getRatings() {
-        return ratings;
-    }
+	public List<Rating> getRatings() {
+		return ratings;
+	}
 
-    public void setRatings(List<Rating> ratings) {
-        this.ratings = ratings;
-    }
+	public void setRatings(List<Rating> ratings) {
+		this.ratings = ratings;
+	}
+
+
+
+	
 
 }

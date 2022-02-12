@@ -25,7 +25,7 @@ public class MovieCatalogController {
 		
 		//get all rated movies ID's - This is the list we work from
 		//We only show movies that are retrieved from this API
-		UserRating userRating = restTemplate.getForObject("http://localhost:8083/ratingsdata/user/" + userId, UserRating.class);
+		UserRating userRating = restTemplate.getForObject("http://ratings-data-service/ratingsdata/user/" + userId, UserRating.class);
 		
 		
 		List<CataglogItem> movies = new ArrayList<>();
@@ -33,7 +33,7 @@ public class MovieCatalogController {
 		.forEach(rating -> 
 		{
 			//for each movie ID call movie info service and get details
-			Movie movieInfo = restTemplate.getForObject("http://localhost:8082/movies/" + rating.getMovieId(), Movie.class);
+			Movie movieInfo = restTemplate.getForObject("http://movie-info-service/movies/" + rating.getMovieId(), Movie.class);
 			
 			//Assign the movie details to the movie catalog object
 			movies.add(new CataglogItem(movieInfo.getName(), movieInfo.getDesc(), rating.getRating()));
